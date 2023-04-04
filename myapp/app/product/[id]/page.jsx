@@ -1,12 +1,11 @@
-"use client"
+'use client'
 
 import React from 'react'
 
-const page = ({params}) => {
-
-    console.log(params)
+const page = ({ params }) => {
+  console.log(params)
   return (
-    <div>
+    <div className='page'>
       <h1>Product</h1>
     </div>
   )
