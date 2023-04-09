@@ -9,11 +9,7 @@ export default function Home() {
   return (
     <>
       <div
-        style={{
-          padding: '20px',
-          border: '1px solid red',
-          textAlign: 'center'
-        }}
+        
       >
         <button onClick={(e) => setstate(state + 1)}>+</button>
         {state} <button onClick={(e) => setstate(state - 1)}>-</button>
