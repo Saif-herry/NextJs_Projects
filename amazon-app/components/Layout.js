@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 export default function Layout ({ title, children }) {
   return (
     <>
@@ -8,7 +9,17 @@ export default function Layout ({ title, children }) {
         <meta name='description' content='Ecommerce Website' />
       </Head>
       <div className='flex min-h-screen flex-col justify-between'>
-        <header>header</header>
+        <header>
+          <nav className='flex h-12 justify-between shadow-md'>
+            <Link href="/">
+               amazon
+            </Link>
+            <div>
+              <Link href="/cart">Cart</Link>
+              <Link href="/login">Login</Link>
+            </div>
+          </nav>
+        </header>
         <main>{children}</main>
         <footer>footer</footer>
       </div>
