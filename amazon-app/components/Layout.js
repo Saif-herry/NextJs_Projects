@@ -10,13 +10,13 @@ export default function Layout ({ title, children }) {
       </Head>
       <div className='flex min-h-screen flex-col justify-between'>
         <header>
-          <nav className='flex h-12 justify-between shadow-md'>
-            <Link href="/">
+          <nav className='flex h-12 justify-between shadow-md items-center px-4'>
+            <Link href="/" className='text-lg font-bold'>
                amazon
             </Link>
             <div>
-              <Link href="/cart">Cart</Link>
-              <Link href="/login">Login</Link>
+              <Link href="/cart" className='p-2'>Cart</Link>
+              <Link href="/login" className='p-2'>Login</Link>
             </div>
           </nav>
         </header>
