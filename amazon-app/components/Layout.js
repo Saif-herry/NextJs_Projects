@@ -20,8 +20,8 @@ export default function Layout ({ title, children }) {
             </div>
           </nav>
         </header>
-        <main>{children}</main>
-        <footer>footer</footer>
+        <main className='container m-auto mt-4 px-4'>{children}</main>
+        <footer className='flex h-10 justify-center items-center shadow-inner'>Copyright @ 2023 Amazon</footer>
       </div>
     </>
   )
