@@ -3,12 +3,12 @@ import React from 'react'
 import Link from 'next/link'
 const ProductItem = ({ product }) => {
   return (
-    <div className='card'>
+    <div className='card rounded shadow'>
       <Link href={`/product/${product.title}`}>
         <img
           src={product.image}
           alt={product.name}
-          className='rounded shadow'
+        //   className='rounded shadow'
         />
       </Link>
 
