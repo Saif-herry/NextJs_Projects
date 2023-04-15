@@ -30,7 +30,7 @@ a {
 }
 
 .card{
-  @apply mb-5 block rounded-lg border-gray-200 shadow-md bg-gray-300
+  @apply mb-5 block rounded-lg border-gray-900 shadow-md bg-slate-50
 }
 
 .primary-button{

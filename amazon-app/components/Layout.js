@@ -8,7 +8,7 @@ export default function Layout ({ title, children }) {
         <title>{title ? title + '-Amazona' : 'Amazon'}</title>
         <meta name='description' content='Ecommerce Website' />
       </Head>
-      <div className='flex min-h-screen flex-col justify-between'>
+      <div className='flex  flex-col justify-between'>
         <header>
           <nav className='flex h-12 justify-between shadow-md items-center px-4'>
             <Link href="/" className='text-lg font-bold'>
