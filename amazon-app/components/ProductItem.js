@@ -4,16 +4,16 @@ import Link from 'next/link'
 const ProductItem = ({ product }) => {
   return (
     <div className='card '>
-      <Link href={`/product/${product.title}`} >
+      <Link href={`/product/${product.id}`} >
         <img
           src={product.image}
           alt={product.name}
-          className='h-60 px-10'
+          className='px-10 h-60'
         />
       </Link>
 
       <div className='flex flex-col items-center justify-center p-5'>
-        <Link href={`/product/${product.title}`}>
+        <Link href={`/product/${product.id}`}>
           <h2 className='text-lg'>{product.title}</h2>
         </Link>
         <p className='mb-2'>{product.category}</p>
