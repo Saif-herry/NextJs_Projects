@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Layout from '../../components/Layout'
 import { useRouter } from 'next/router'
 import data from '../../Utils/data'
 import Link from 'next/link'
-import Image from 'next/legacy/image'
 
 const ProductScreen = () => {
   const { query } = useRouter()
@@ -18,18 +18,40 @@ const ProductScreen = () => {
   return (
     <Layout title={product.name}>
       <div className='py-2'>
-      <Link href="/">Back to Product</Link>
+        <Link href='/'>Back to Product</Link>
       </div>
 
-      <div className='md:col-span-2'>
-        <Image src={product.image}
-        alt={product.title}
-        width={640}
-        height={640}
-        layout="responsive">
-
-
-        </Image>
+      <div className='grid md:grid-cols-4 md:gap-3'>
+        <div className='md:col-span-2'>
+          <img
+            src={product.image}
+            alt={product.title}
+            width={240}
+            height={440}
+          />
+        </div>
+        <div>
+          <ul>
+            <li>
+              <h1 className='text-lg'>{product.title}</h1>
+            </li>
+            <li>Discription: {product.description}</li>
+            <li>Rating: {product.rating.rate}</li>
+          </ul>
+        </div>
+        <div>
+        <div className='card p-5'>
+          <div className='mb-2 flex justify-between'>
+            <div>Price</div>
+            <div>${product.price}</div>
+          </div>
+          <div className='mb-2 flex justify-between'>
+            <div>Status</div>
+            <div>{product.countInStock > 0 ? 'In Stock' : 'Unavialable'}</div>
+          </div>
+          <button className='primary-button w-full'>Add to cart</button>
+        </div>
+        </div>
       </div>
     </Layout>
   )
