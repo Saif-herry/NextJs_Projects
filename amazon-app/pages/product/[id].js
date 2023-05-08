@@ -21,13 +21,15 @@ const ProductScreen = () => {
         <Link href='/'>Back to Product</Link>
       </div>
 
-      <div className='grid md:grid-cols-4 md:gap-3'>
-        <div className='md:col-span-2'>
+      <div className='grid md:grid-cols-4 md:gap-12'>
+        <div className='card md:col-span-1 place-content-center '>
           <img
             src={product.image}
             alt={product.title}
             width={240}
-            height={440}
+            height={40}
+            className=' px-2 mx-4 my-2'
+            
           />
         </div>
         <div>
@@ -41,7 +43,7 @@ const ProductScreen = () => {
         </div>
         <div>
         <div className='card p-5'>
-          <div className='mb-2 flex justify-between'>
+          <div className='mb-2 flex justify-between '>
             <div>Price</div>
             <div>${product.price}</div>
           </div>
