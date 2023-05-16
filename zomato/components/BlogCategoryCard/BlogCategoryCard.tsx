@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 interface BlogCategoryCardProps {
@@ -12,13 +13,26 @@ const BlogCategoryCard: FC<BlogCategoryCardProps> = (props) => {
   const { image, name, slug, description } = props;
 
   return (
-    <link href={`/blog/${slug}`}>
+    <Link href={`/blog/${slug}`}>
       <div className={blogCategoryCardClassName.categoryCard}>
-        <Image width={200} height={200} className={blogCategoryCardClassName.categoryImage} src={image} alt={name}/>
+        <Image
+          width={200}
+          height={200}
+          className={blogCategoryCardClassName.categoryImage}
+          src={image}
+          alt={name}
+        />
+
+        <h3 className={blogCategoryCardClassName.categoryName}>{name}</h3>
+        <p className={blogCategoryCardClassName.categoryDescription}>
+          {description.slice(0, 100)}
+        </p>
       </div>
-    </link>
+    </Link>
   );
 };
+
+export default BlogCategoryCard;
 
 const blogCategoryCardClassName = {
   categoryCard: 'w-full overflow-hidden bg-white p-6 rounded-lg shadow-md',
@@ -27,3 +41,5 @@ const blogCategoryCardClassName = {
   categoryName: 'text-xl font-bold mb-2',
   categoryDescription: 'text-gray-500'
 };
+
+
